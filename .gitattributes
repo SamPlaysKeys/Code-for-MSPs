@@ -1,0 +1,22 @@
+# Default behavior: normalize line endings for all text files
+* text=auto eol=lf
+
+# PowerShell scripts should use CRLF (Windows-style endings)
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
+*.psd1 text eol=crlf
+
+# Shell scripts should use LF (Unix-style endings)
+*.sh text eol=lf
+
+# Text files that should use LF
+*.md text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+
+# Binary files that should not be modified
+*.exe binary
+*.dll binary
+*.png binary
+*.jpg binary
+*.pdf binary

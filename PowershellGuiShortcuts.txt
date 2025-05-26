@@ -1,0 +1,6 @@
+Registry (Regedit)
+Task Scheduler (taskschd.msc)
+Eventviewer (Eventvwr)
+Change Time (timedate.cpl)
+Local users (lusrmgr.msc)
+Device Manager (devmgmt.msc)

@@ -1,0 +1,1 @@
+﻿while ($True) {clear;$ip = Read-host "`nwhat is the ip to search?`n";clear;Write-Host "`n`n`nThe location of IP Address $IP is:`n"; invoke-restmethod http://ip-api.com/json/$ip | Format-Table -Property country, region, regionName, City;pause}
