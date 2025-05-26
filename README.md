@@ -1,6 +1,7 @@
-# Code for MSPs ![CI Status](https://github.com/SamFleming/Code-for-MSPs/workflows/CI/badge.svg)
+# Code for MSPs
 
 A collection of PowerShell scripts and utilities designed for Managed Service Providers (MSPs) to automate and streamline IT administration tasks for Windows environments, Microsoft 365, and Azure.
+This has been re-uploaded due to consistency issues with the original repository.
 
 ## Repository Overview
 
@@ -73,16 +74,6 @@ This repository contains scripts for automating common MSP tasks including:
 - `DomotzSyncroSilentInstaller.ps1` - Silent installer for Domotz and Syncro RMM tools
 - `Cheese w options and taskkill.ps1` - Example of process management
 
-
-## Prerequisites
-
-- Windows PowerShell 5.1 or PowerShell Core 7.x
-- Administrative privileges for most scripts
-- Azure/Microsoft 365 credentials for cloud management scripts
-- Windows Management Framework 5.0 or higher
-- Internet connectivity for cloud-based operations
-
-
 ## Setup and Usage
 
 Most scripts are designed to be standalone and can be executed directly in PowerShell. To use this repository:
@@ -98,39 +89,6 @@ Example:
 .\ScriptName.ps1 -Parameter1 Value1 -Parameter2 Value2
 ```
 
-For detailed usage of each script, check the comments at the beginning of the file or run:
-
-```powershell
-Get-Help .\ScriptName.ps1 -Full
-```
-
-
-## Testing
-
-To test scripts locally before deployment:
-
-1. **Static Analysis**:
-   - Install the PSScriptAnalyzer module:
-     ```powershell
-     Install-Module -Name PSScriptAnalyzer -Scope CurrentUser -Force
-     ```
-   - Run analysis on a script:
-     ```powershell
-     Invoke-ScriptAnalyzer -Path .\ScriptName.ps1 -Settings PSGallery\PSScriptAnalyzer\BuiltinRules
-     ```
-
-2. **Syntax Validation**:
-   - Validate script syntax without execution:
-     ```powershell
-     Get-Content .\ScriptName.ps1 -Raw | Invoke-Expression -Command { param($script) [System.Management.Automation.Language.Parser]::ParseInput($script, [ref]$null, [ref]$null) }
-     ```
-
-3. **Test in Isolated Environment**:
-   - For Azure/Microsoft 365 scripts, create a test tenant if possible
-   - Test Windows configuration scripts in a virtual machine
-   - Use PowerShell's `-WhatIf` parameter when available
-
-
 ## Line Ending Configuration
 
 This repository is configured to handle line endings appropriately for different operating systems:
@@ -140,18 +98,6 @@ This repository is configured to handle line endings appropriately for different
 - Text files use LF line endings
 
 The configuration is managed via the `.gitattributes` file to ensure consistency across platforms.
-
-
-## Continuous Integration
-
-This repository is configured with GitHub Actions for continuous integration. The CI workflow performs the following checks:
-
-- Line ending validation according to `.gitattributes` rules
-- PowerShell script syntax validation
-- Code quality analysis with PSScriptAnalyzer
-
-The CI workflow runs automatically on push to the main branch and on all pull requests.
-
 
 ## Security
 
@@ -182,27 +128,6 @@ When scripts require credentials:
    ```
 4. **Use least-privilege service accounts** instead of administrative accounts whenever possible
 5. **Audit credential usage** to detect unauthorized access
-
-
-## Contributing
-
-Contributions to improve existing scripts or add new ones are welcome. To contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature-name`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature-name`)
-5. Create a new Pull Request
-
-Please ensure your code follows these guidelines:
-
-- Include clear comments explaining functionality
-- Add error handling where appropriate
-- Test scripts before submitting
-- Update this README if adding new script categories
-- Ensure scripts pass PSScriptAnalyzer checks
-- Follow consistent naming conventions
-
 
 ## License
 
