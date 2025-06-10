@@ -30,6 +30,12 @@ This repository contains scripts for automating common MSP tasks including:
 - `list-powered-off-Azure-vms.ps1` - Lists Azure VMs that are currently powered off
 - `upgrade-vm-disks.ps1` - Upgrades Azure VM disk configurations
 
+### Intune Management
+
+- `Intune - Block IPv6 Router Discovery/` - Folder containing Intune compliance scripts for IPv6 router discovery management
+  - `Detection-IPv6RouterDiscovery.ps1` - Detection script to check IPv6 router discovery settings
+  - `Remediation-IPv6RouterDiscovery.ps1` - Remediation script to disable IPv6 router discovery
+
 ### System Administration
 
 - `Get-WindowsKey.ps1` / `GetWindowsKey2012R2.ps1` - Retrieves Windows license keys
